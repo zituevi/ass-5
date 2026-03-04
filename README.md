@@ -109,7 +109,14 @@ Username: admin
 Password: admin123
 ```
 
+
 ---
+
+### Optional: 
+ - No need to show status: Open, Closed styles On modals. 
+ - No Need to show icon on labels 
+ - No need to apply styles on Priority 
+--- 
 
 
 ## 📤 What to submit
