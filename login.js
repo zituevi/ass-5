@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
    
     if (username === "admin" && password === "admin123") {
       
-      window.location.href = "index.html";
+      window.location.href = "dashboard.html";
 
     } else {
       
