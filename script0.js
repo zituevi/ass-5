@@ -115,6 +115,10 @@ function DisplayIssues(issues, container) {
       </div>
     `;
 
+
+
+    
+
     card.addEventListener("click", () => openModal(issue));
     container.appendChild(card);
   });
