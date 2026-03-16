@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // SUCCESS: Redirect to the dashboard
       // Ensure your main file is named 'dashboard.html' or 'index.html'
       window.location.href = "index.html";
+      
     } else {
       // FAILURE: Show the error message and highlight the error
       errorMsg.classList.remove("hidden");
