@@ -7,18 +7,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  let issuesData = data.data; // store all issues from API
+  let issuesData = data.data; 
 
-  // Fetch issues from API
+
   fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
     .then(res => res.json())
     .then(data => {
       issuesData = data.data;
 
-      // Initial render - show all issues
+
       DisplayIssues(issuesData, container);
 
-      // Update counts
+
       document.getElementById("issue-count").innerText = issuesData.length;
       document.getElementById("open-count").innerText = issuesData.filter(i => i.status === "open").length;
       document.getElementById("closed-count").innerText = issuesData.filter(i => i.status === "closed").length;
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  // ✅ Filter buttons
+
   btnAll.addEventListener("click", () => {
     DisplayIssues(issuesData, container);
     setActiveButton(btnAll);
@@ -50,8 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setActiveButton(btnClosed);
   });
 
-  // Highlight active button
-  function setActiveButton(activeBtn) {
+{
     [btnAll, btnOpen, btnClosed].forEach(btn => {
       btn.classList.remove("bg-violet-600");
       btn.classList.add("btn-primary");
@@ -65,11 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(res => res.json())
     .then(data => {
       const issues = data.data;
-      DisplayIssues(issues, container); // pass container to your DisplayIssues function
+      DisplayIssues(issues, container); 
     });
 
 function DisplayIssues(issues, container) {
-  container.innerHTML = ""; // clear old cards before adding new ones
+  container.innerHTML = ""; 
 
   issues.forEach(issue => {
     const statusIcon = issue.status === "closed"
@@ -117,7 +116,7 @@ function DisplayIssues(issues, container) {
 
 
 
-    
+
 
     card.addEventListener("click", () => openModal(issue));
     container.appendChild(card);
